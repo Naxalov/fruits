@@ -9,8 +9,17 @@ def get_frutis_name(data:str)->list:
     """
 
 
-data = open('fruits.csv').read()
+    f = open(data,mode='r')
+    x = f.read()
+    y = x.split("\n")
+    z = 0
+    sum = []
+    data = 0
+    for item in y:
+        print(item.split(",")[0])
 
-print(get_frutis_name(data))
+        
+
+get_frutis_name('fruits.csv')
 
     
