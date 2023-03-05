@@ -8,4 +8,18 @@ def get_cheapest_fruit(data:str)->str:
         name of the cheapest fruit
     """
     # your code here
-    pass
+    f = open(data,mode='r')
+    x = f.read()
+    y = x.split("\n")
+    z = 0
+    sum = []
+    data = 0
+    
+    for item in y:
+        data = float((item.split(","))[1])
+        sum.append(data)
+        z = max(sum)
+    print(z)
+            
+
+get_cheapest_fruit('fruits.csv')
